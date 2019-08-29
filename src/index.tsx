@@ -1,15 +1,15 @@
-import React from 'react'
+import * as React from 'react'
 import { render } from 'react-dom'
 import './index.css'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
-import App from './home/app'
-import Home from './home/home'
-import TechOverview from './technical-overview/overview'
-import About from './about/about'
+import Layout from './pages/layout'
+import Home from './pages/home/home'
+import TechOverview from './pages/technical-overview/overview'
+import About from './pages/about/about'
 
 render((
 <Router history={hashHistory}>
-    <Route path='/' component={App}>
+    <Route path='/' component={Layout}>
         <IndexRoute component={Home} />
         <Route path='/tech-overview' component={TechOverview} />
         <Route path='/about' component={About} />

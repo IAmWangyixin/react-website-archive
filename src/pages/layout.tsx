@@ -1,12 +1,16 @@
 import React from 'react'
-import NavLink from './nav-link'
+import NavLink from '../component/nav-link/nav-link'
 
-function App(props) {
+export interface LayoutProps {
+  children: string
+}
+
+function Layout({ children }: LayoutProps) {
   return (
     <div className="app">
       <header className="header">
         <p>Nina's home</p>
-        <ul className="nav" role="nav">
+        <ul className="nav">
           <li>
             <NavLink to="/">
               首页
@@ -25,7 +29,7 @@ function App(props) {
         </ul>
       </header>
       <div>
-        {props.children}
+        {children}
       </div>
       <footer>
         页脚
@@ -34,4 +38,4 @@ function App(props) {
   )
 }
 
-export default App
+export default Layout
