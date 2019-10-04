@@ -1,9 +1,9 @@
-import React, { Children } from 'react'
+import React, { Children, ReactNode } from 'react'
 import { Link } from 'react-router'
 
 export interface NavLinkProps {
     to: string,
-    children: string
+    children: ReactNode
 }
 
 export default function NavLink (props: NavLinkProps) {
