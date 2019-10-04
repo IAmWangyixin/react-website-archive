@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import './index.css'
+import './index.less'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import Layout from './pages/layout'
 import Home from './pages/home/home'
