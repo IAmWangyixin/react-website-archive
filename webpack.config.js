@@ -1,7 +1,7 @@
 var fs = require('fs')
 var path = require('path')
 var webpack = require('webpack')
-const { CheckerPlugin } = require('awesome-typescript-loader');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 var ROOT = path.resolve(__dirname)
 
 module.exports = {
