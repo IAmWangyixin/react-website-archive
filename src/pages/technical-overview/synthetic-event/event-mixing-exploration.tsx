@@ -11,7 +11,6 @@ class EventMixingExploration extends Component<IsProps, IsState> {
     constructor(props: IsProps) {
         super(props)
         this.handleButtonClick = this.handleButtonClick.bind(this)
-        this.cancelChangeActive = this.cancelChangeActive.bind(this)
         // this.handleImageClick = this.handleImageClick.bind(this)
         this.bodyClick = this.bodyClick.bind(this)
 
@@ -23,14 +22,10 @@ class EventMixingExploration extends Component<IsProps, IsState> {
         if (e.target && (e.target.matches('img.qr-image') || e.target.matches('button.qr-button'))) {
             return;
         }
-
-        console.log(this.state.active)
+        
         this.setState({
             active: false
         })
-    }
-    cancelChangeActive(e: { stopPropagation: () => void; }) {
-        e.stopPropagation()
     }
     componentDidMount() {
         document.body.addEventListener('click', this.bodyClick)
@@ -50,7 +45,8 @@ class EventMixingExploration extends Component<IsProps, IsState> {
     // }
     render() {
         return (
-            <div className="qr-wrapper">
+            <div className="qr-wrapper overview-sub-content">
+                <p>合成事件与原生事件探索：</p>
                 <button
                     className="qr-button" 
                     onClick={this.handleButtonClick}>
