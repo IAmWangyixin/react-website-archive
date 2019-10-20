@@ -95,23 +95,6 @@ class Form extends React.Component<P, S> {
                 radioValue,
                 area
             } = this.state
-        const checkboxLists: Array<ReactNode> = []
-        const that = this
-        fruitArr.forEach(function(city) {
-            checkboxLists.push(
-                <label htmlFor={city} key={city}>
-                    <input 
-                        type="checkbox"
-                        value={city}
-                        id={city}
-                        name="city"
-                        checked={checkedValues.indexOf(city) !== -1}
-                        onChange={that.handleCheckboxChange}
-                        />
-                    {city}
-                </label>
-            )
-        })
         return (
             <div className="overview-sub-content">
                 <p>
@@ -153,7 +136,21 @@ class Form extends React.Component<P, S> {
                 </p>
                 <div className="item">
                     checkbox:
-                    { checkboxLists }
+                    {
+                        fruitArr.map(fruit => (
+                            <label htmlFor={fruit} key={fruit}>
+                                <input 
+                                    type="checkbox"
+                                    value={fruit}
+                                    id={fruit}
+                                    name="fruit"
+                                    checked={checkedValues.indexOf(fruit) !== -1}
+                                    onChange={this.handleCheckboxChange}
+                                    />
+                                {fruit}
+                            </label>
+                        ))
+                    }
                 </div>
                 <div className="item">
                     radio:
