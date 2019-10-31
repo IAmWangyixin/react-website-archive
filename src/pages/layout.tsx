@@ -1,18 +1,18 @@
 import React from 'react'
 import NavLink from '../component/nav-link/nav-link'
-import './layout.less'
 
 export interface LayoutProps {
   children: string
 }
 
 function Layout({ children }: LayoutProps) {
+  let style = require('./layout.less');
   return (
-    <div className="app">
-      <header className="app-header">
-        <div className="app-header-inner">
+    <div className={style.app}>
+      <header className={style.header}>
+        <div className={style.headerInner}>
           <p>Nina's home</p>
-          <ul className="nav">
+          <ul>
             <li>
               <NavLink to="/">
                 首页
@@ -31,11 +31,11 @@ function Layout({ children }: LayoutProps) {
           </ul>
         </div>      
       </header>
-      <div className="app-main">
+      <div className={style.main}>
         {children}
       </div>
-      <footer className="app-footer">
-        <div className="app-footer-inner">
+      <footer className={style.footer}>
+        <div className={style.footerInner}>
           nina.wang@gmail.com
         </div>
       </footer>

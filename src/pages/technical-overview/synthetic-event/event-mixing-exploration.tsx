@@ -44,19 +44,20 @@ class EventMixingExploration extends Component<IsProps, IsState> {
     //     e.stopPropagation()
     // }
     render() {
+        let style = require('./synthetic-event.less')
         return (
-            <div className="qr-wrapper overview-sub-content">
+            <div className={style.wrapper}>
                 <p>合成事件与原生事件探索：</p>
                 <button
-                    className="qr-button" 
+                    className={style.button}
                     onClick={this.handleButtonClick}>
                     二维码
                 </button>
                 <div 
-                    className="qr-content"
+                    className={style.content}
                     style={{ display: this.state.active ? 'block' : 'none' }}
                     >
-                    <img className="qr-image" src={QR} alt="qr"/>
+                    <img className={style.image} src={QR} alt="qr"/>
                 </div>
             </div>
         )

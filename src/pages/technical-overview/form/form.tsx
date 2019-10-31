@@ -87,6 +87,7 @@ class Form extends React.Component<P, S> {
         console.log('radio value:', this.state.radioValue)
     }
     render() {
+        let style = require('./form.less');
         const {
                 textValue, 
                 textareaValue, 
@@ -96,7 +97,7 @@ class Form extends React.Component<P, S> {
                 area
             } = this.state
         return (
-            <div className="overview-sub-content">
+            <div className={style.wrapper}>
                 <p>
                     单行输入框：
                     <input
@@ -134,7 +135,7 @@ class Form extends React.Component<P, S> {
                             })
                         }}/>
                 </p>
-                <div className="item">
+                <div className={style.item}>
                     checkbox:
                     {
                         fruitArr.map(fruit => (
@@ -152,7 +153,7 @@ class Form extends React.Component<P, S> {
                         ))
                     }
                 </div>
-                <div className="item">
+                <div className={style.item}>
                     radio:
                     <input 
                         type="radio"
@@ -169,7 +170,7 @@ class Form extends React.Component<P, S> {
                         />
                     <span>coding</span>
                 </div>
-                <div className="item">
+                <div className={style.item}>
                     select:
                     <select 
                         name="area" 
