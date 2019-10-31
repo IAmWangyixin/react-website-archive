@@ -1,3 +1,6 @@
+# 查看效果
+[点击看看](https://wangyimei.github.io/react-website/.)
+
 # 基于react框架的技术探索
 
 `yarn`
