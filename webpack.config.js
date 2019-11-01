@@ -45,7 +45,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".png", '.less'],
+    extensions: [".ts", ".tsx", ".js", ".json", ".png", ''],
     alias: {
       '@': ROOT + '/src'
     }
