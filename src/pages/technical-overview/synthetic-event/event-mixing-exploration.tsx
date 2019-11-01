@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import styles from './synthetic-event.less'
+import classNames from 'classnames'
 import QR from 'images/qr.jpg'
-import './synthetic-event.less'
 
 interface IsProps {}
 interface IsState {
@@ -44,20 +45,22 @@ class EventMixingExploration extends Component<IsProps, IsState> {
     //     e.stopPropagation()
     // }
     render() {
-        let style = require('./synthetic-event.less')
+        const contentClassName = classNames({
+            [styles.hideContent]: !this.state.active,
+            [styles.showContent]: this.state.active
+        });
         return (
-            <div className={style.wrapper}>
+            <div className={styles.wrapper}>
                 <p>合成事件与原生事件探索：</p>
                 <button
-                    className={style.button}
+                    className={styles.button}
                     onClick={this.handleButtonClick}>
                     二维码
                 </button>
                 <div 
-                    className={style.content}
-                    style={{ display: this.state.active ? 'block' : 'none' }}
+                    className={contentClassName}
                     >
-                    <img className={style.image} src={QR} alt="qr"/>
+                    <img className={styles.image} src={QR} alt="qr"/>
                 </div>
             </div>
         )

@@ -63,7 +63,7 @@ declare module '*.module.sass' {
   export default classes;
 }
 
-declare module '*.module.less' {
+declare module '*.less' {
   const classes: { [key: string]: string };
   export default classes;
 }

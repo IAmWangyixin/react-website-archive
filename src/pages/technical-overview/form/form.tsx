@@ -1,4 +1,6 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
+import style from './form.less'
+
 interface P {}
 interface S { 
     textValue: string,
@@ -87,7 +89,6 @@ class Form extends React.Component<P, S> {
         console.log('radio value:', this.state.radioValue)
     }
     render() {
-        let style = require('./form.less');
         const {
                 textValue, 
                 textareaValue, 

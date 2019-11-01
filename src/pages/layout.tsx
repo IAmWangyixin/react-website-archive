@@ -1,12 +1,12 @@
 import React from 'react'
 import NavLink from '../component/nav-link/nav-link'
+import style from './layout.less'
 
 export interface LayoutProps {
   children: string
 }
 
 function Layout({ children }: LayoutProps) {
-  let style = require('./layout.less');
   return (
     <div className={style.app}>
       <header className={style.header}>
