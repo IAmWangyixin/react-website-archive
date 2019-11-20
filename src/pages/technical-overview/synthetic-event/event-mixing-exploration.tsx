@@ -51,7 +51,7 @@ class EventMixingExploration extends Component<IsProps, IsState> {
         });
         return (
             <div className={styles.wrapper}>
-                <p>合成事件与原生事件探索：</p>
+                <h1>合成事件与原生事件探索</h1>
                 <button
                     className={styles.button}
                     onClick={this.handleButtonClick}>
